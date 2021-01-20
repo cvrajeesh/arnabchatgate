@@ -1,0 +1,60 @@
+2819
+Chat With Romil Ramgaria
+collection and processing would bring in new technologies, new rasearch
+methodologies, new methods in analysis, new and better ways to ensure better
+data quality
+3.10 BARC should be at an armã€™s length from its own subsidiary, Meterology
+Data Pvt Itd., which is the sole data collecting agency for BARC, as of now; so
+that the entire process of measurement is carried out independently to ensure
+inherent checks in data inconsistency, i.e., there should be a clear demarcation
+of the roles between the data collection agency and the data
+processinç/publishing agency.
+3.11 Efforts may be made to withhold the identity of the channel&€™s name, and
+number, while collecting and processing the data from the field to bring more
+transparency in the complete process.
+36
+3.12 BARC should also separate its functions in two unils (a) one unit should be
+responsible for prescribing methodology of ratings/validation of data,
+publishing the data and audit mechanism and (b) the other unit for processing
+the data, watermarking or any other such technical work including management of
+data collection agencies.
+3.13 Once multiple agencies come forvard for rating, BARC should limit its role
+to publishing the ratings, and framing methodology and audit mechanism for the
+rating agencies, so that the number of agencies can develop multiple rating
+system leveraging new technologies.
+3.14 The rating agency should be mandated to increase the sample size from the
+existing 14,000 to 60,000 by the end of 2020, and 1, 00, 000 by the end of 2022
+using the existing technology.
+3.15 BARC shall immediately conduct a study in collaboration with the Indian
+Statistical Institute or any other institute of repute, to estinate the
+appropriate sample size, and to get the correct representation of the viewership
+including regional and niche channels. Sample size once increased; it will make
+the data tampering an arduous exercise. On the basis of the study conducted,
+DARC should reach the target of reaching the sample size in a time-bcund manner.
+3.16 There should be some financial disincentives prescribed as penal provisions
+including the cancellation of registration, if the specified target is not met
+by BARC.
+3.10 MIB should amend the DTH License and MSO registration so as to mandate STBs
+capable of transferring viewership data and adoption of RPD technolocy. This
+transfer or data can be done by establishing a return path/connection from STB
+to the
+37
+remote servers of the Audience Measurement agency.
+3.18 Anonymized viewership data should be transferred electronically to the
+Audience Measurement agency for statistical analysis and Television Rating
+purpose. No data from any STB should be transferred to Rating agency without
+explicit consent from the subscribers
+3.19 DPOs should be allowed to mutually negotiate the terms and conditions for
+sharing the data with Measurement Rating agency with:n the overall framework
+prescribed by TRAI from time to time. Such framework shall be prescribed by TRAI
+once these recommendations are accepted by MIB.
+3.20 BARC should keep all relevant data such as original data (meter- level
+data) arising out of the household panel, the data deleted/ignored/not
+considered for ratirgs and--the resplatent processed data fcr TRP rating at least
+TPHET
+3/1994
+Sectival
+B255
+Page No- 286
+od
+Scanned with CamScanner

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ArnabChatGate - WhatsApp Transcript between Ex-CEO of BARC Dasgupta and
+      Arnab Goswami
+    </title>
+    <style>
+      .disable {
+        pointer-events: none;
+        color: gray;
+      }
+
+      #page-title {
+        text-align: center;
+      }
+
+      .main-content {
+        margin: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .content {
+        height: 100%;
+        width: 50%;
+      }
+
+      #chat-content {
+        white-space: pre;
+        font-family: monospace;
+        overflow: auto;
+      }
+      #page-ss {
+        max-height: 100%;
+      }
+
+      .page-nav {
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer {
+        margin: 1rem;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>#ArnabChatGate</h1>
+    <h2>
+      WhatsApp Transcript between BARC ex-chief Dasgupta and Arnab Goswami
+    </h2>
+    <em>* Source: Mumbai Police's chargesheet * </em>
+
+    <p>
+      Text from scanned PDF is extracted using Amazon Textract service. If you
+      find issues please send a
+      <a href="https://github.com/cvrajeesh/arnabchatgate/pulls" target="_blank"
+        >pull request</a
+      >
+    </p>
+
+    <h3 id="page-title"></h3>
+    <section class="main-content">
+      <article id="chat-content" class="content"></article>
+      <aside class="content">
+        <img id="page-ss" src="" />
+      </aside>
+    </section>
+
+    <nav class="page-nav">
+      <a id="prev" href="#" class="disable">Prev Page</a
+      >&nbsp;&nbsp;|&nbsp;&nbsp;
+      <a id="next" href="#">Next Page</a>
+    </nav>
+
+    <footer class="footer">
+      <small
+        >** transcript extracted using Amazon Textract, if you find mistakes
+        please submit a
+        <a
+          href="https://github.com/cvrajeesh/arnabchatgate/pulls"
+          target="_blank"
+          >pull request</a
+        ></small
+      >
+
+      <small
+        >Hosted on
+        <a href="https://www.clodui.com" target="_blank">Clodui</a></small
+      >
+    </footer>
+    <script>
+      (function () {
+        var chat,
+          screenShot,
+          next,
+          prev,
+          title,
+          startPage = 2,
+          endPage = 502,
+          pageNum = startPage;
+
+        function getPage(number, success, failure) {
+          var request = new XMLHttpRequest();
+          request.open("GET", "./data/page" + number + ".txt", true);
+
+          request.onload = function () {
+            if (this.status >= 200 && this.status < 400) {
+              success(number, this.response);
+            } else {
+              failure(number, "Server error");
+            }
+          };
+
+          request.onerror = function () {
+            failure(number, "Connection error");
+          };
+
+          request.send();
+        }
+
+        function onPageLoadError(num, err) {
+          console.error("Page " + num + " " + err);
+        }
+
+        function toggleNav(el, disable) {
+          disable
+            ? el.classList.add("disable")
+            : el.classList.remove("disable");
+        }
+
+        function onPageLoaded(num, data) {
+          toggleNav(next, num == endPage);
+          toggleNav(prev, num == startPage);
+
+          title.innerText = "Page " + (num - 1) + " / 501";
+          chat.innerText = data;
+          screenShot.src = "./data/page" + num + ".png";
+        }
+
+        function onLoaded() {
+          chat = document.getElementById("chat-content");
+          screenShot = document.getElementById("page-ss");
+          next = document.getElementById("next");
+          prev = document.getElementById("prev");
+          title = document.getElementById("page-title");
+
+          next.addEventListener("click", function (e) {
+            e.preventDefault();
+            getPage(++pageNum, onPageLoaded, onPageLoadError);
+          });
+
+          prev.addEventListener("click", function (e) {
+            e.preventDefault();
+            getPage(--pageNum, onPageLoaded, onPageLoadError);
+          });
+
+          getPage(pageNum, onPageLoaded, onPageLoadError);
+        }
+
+        document.addEventListener("DOMContentLoaded", onLoaded);
+      })();
+    </script>
+  </body>
+</html>
